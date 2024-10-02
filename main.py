@@ -176,17 +176,20 @@ perceptronB = Perceptron_Region(learn_rate=0.4)
 errorsB = perceptronB.train_to_n(epochs, setB["X"], setB["Y"])
 
 plt.figure(figsize=(10, 6))
-plt.xlabel("Epochs")
-plt.ylabel("Number of Errors")
+
 
 # Plots Training Error vs Epochs for A
 plt.title("Training Error vs. Number of Epochs for Set A")
+plt.xlabel("Epochs")
+plt.ylabel("Number of Errors")
 plt.plot(range(1, epochs+1), errorsA, label="Set A(Linearly Seperable)", color="blue")
 plt.legend()
 plt.show()
 
 # Plots Training Error vs Epochs for B
 plt.title("Training Error vs. Number of Epochs for Set B")
+plt.xlabel("Epochs")
+plt.ylabel("Number of Errors")
 plt.plot(range(1, epochs + 1), errorsB, label="Set B (Non-Linearly Separable)", color="red")
 plt.legend()
 plt.show()
